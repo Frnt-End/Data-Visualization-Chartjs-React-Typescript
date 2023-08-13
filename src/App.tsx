@@ -32,21 +32,24 @@ const App: React.FC = () => {
       ) : (
         <Container>
           <div>
-            <div className="header-box">
-              <p>Electricity annual sales overview</p>
-              <h3>Electricity Annual Chart</h3>
+            <div className="top-chart">
+              {" "}
+              <div className="header-box">
+                <p>Electricity annual sales overview</p>
+                <h3>Electricity Annual Chart</h3>
+              </div>
             </div>
-            <div className="top-chart"></div>
             <div className="bottom-chart">
               <BarChart data={salesData} startColor={""} endColor={""} />
             </div>
           </div>
           <div>
-            <div className="header-box">
-              <p>Sales data overview</p>
-              <h3>Electricity Annual Details</h3>
+            <div className="top-table">
+              <div className="header-box">
+                <p>Sales data overview</p>
+                <h3>Electricity Annual Details</h3>
+              </div>
             </div>
-            <div className="top-table"></div>
             <Divider></Divider>
             <div className="bottom-table">
               <DataTable data={salesData} />

@@ -8,18 +8,6 @@ export const Container = styled.div`
   align-items: flex-start;
   height: 100%;
 
-  .header-box {
-    height: auto;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    left: 29px;
-    top: 17px;
-    padding: 15px 60px;
-  }
-
   h3 {
     color: #4d3550;
     font-weight: 400;
@@ -37,8 +25,6 @@ export const Container = styled.div`
 
   > div {
     height: 90%;
-    max-height: 90%;
-    min-height: 90%;
 
     background: #fff;
     border-radius: 20px 20px 0 0;
@@ -53,11 +39,24 @@ export const Container = styled.div`
     position: relative;
 
     .top-chart {
-      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 260px;
       background: url(chart.jpg) no-repeat center top;
       background-size: auto 326px;
-      padding: 240px 20px 20px 20px;
       border-radius: 16px 16px 0 0;
+
+      .header-box {
+        height: auto;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        margin: 30px auto;
+        padding: 15px 60px;
+      }
     }
 
     .bottom-chart {
@@ -71,12 +70,26 @@ export const Container = styled.div`
     position: relative;
 
     .top-table {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
       width: 100%;
       height: 250px;
       background: url(hand.jpg) no-repeat center;
       background-size: auto 200px;
       background-position-y: 38px;
       border-radius: 16px 16px 0 0;
+      .header-box {
+        height: auto;
+        margin: 30px auto;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+
+        padding: 15px 60px;
+      }
     }
 
     .bottom-table {
@@ -85,15 +98,43 @@ export const Container = styled.div`
     }
   }
 
-  @media (max-width: 1000px) {
+  @media (min-width: 700px) and (max-width: 1000px) {
+    width: 100%;
+    > div:first-child,
+    > div:last-child {
+      width: 45%;
+    }
+    .bottom-table,
+    .bottom-chart {
+      padding: 10px 15px 0 15px;
+    }
+    > div:first-child {
+      .bottom-chart {
+        padding: 10px 15px 50px 15px;
+      }
+    }
+    > div:last-child {
+      .bottom-table {
+        padding: 10px 15px 0 15px;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
     flex-direction: column;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: center;
 
     > div:first-child {
       width: 90%;
       height: auto;
+
       margin-bottom: 60px;
+
+      .top-chart {
+        background-size: auto 400px;
+      }
     }
 
     > div:last-child {

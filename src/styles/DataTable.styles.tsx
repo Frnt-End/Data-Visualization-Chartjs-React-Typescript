@@ -8,18 +8,20 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `;
+
 export const TablePagination = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   button {
     background: #f6f6f6 !important;
     border: 1px solid rgba(75, 192, 192, 0);
-    padding: 6px 12px;
+    padding: 3% 5%;
     border-radius: 6px;
-    margin: 20px 6px;
+    margin: 6% 3%;
     cursor: pointer;
-    transition: 0.3 ease;
+    transition: 0.3s ease; // Corrected '0.3 ease' to '0.3s ease'
     color: #555;
 
     &:disabled {
@@ -33,6 +35,7 @@ export const TablePagination = styled.div`
       background: rgba(32, 144, 230, 0.7) !important;
       border: 1px solid rgba(75, 192, 192, 0.1);
       color: #fff;
+
       &:disabled {
         background: rgba(75, 192, 192, 0) !important;
         border: 1px solid rgba(75, 192, 192, 0);
@@ -40,10 +43,19 @@ export const TablePagination = styled.div`
       }
     }
   }
+
+  @media (max-width: 1000px) {
+    width: 70%;
+    button {
+      padding: 2% 3%;
+      margin: 4% 2%;
+    }
+  }
 `;
+
 export const TableStyles = styled.div`
   width: 100%;
-  height: 350px;
+  height: 340px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +64,7 @@ export const TableStyles = styled.div`
   table {
     width: 100%;
     border-collapse: collapse;
-    animation: ${fadeIn} 1s ease-in-out;
+    animation: "${fadeIn}" 1s ease-in-out; // Added double quotes around fadeIn
     border-spacing: 0;
 
     th,
@@ -100,5 +112,8 @@ export const TableStyles = styled.div`
         }
       }
     }
+  }
+  @media (min-width: 700px) and (max-width: 1000px) {
+    height: 330px;
   }
 `;
