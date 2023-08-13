@@ -104,10 +104,7 @@ export const Container = styled.div`
     > div:last-child {
       width: 45%;
     }
-    .bottom-table,
-    .bottom-chart {
-      padding: 10px 15px 0 15px;
-    }
+
     > div:first-child {
       .bottom-chart {
         padding: 10px 15px 50px 15px;
@@ -134,12 +131,37 @@ export const Container = styled.div`
 
       .top-chart {
         background-size: auto 400px;
+        .header-box {
+          width: 90%;
+          padding: 15px 20px;
+          border-radius: 16px;
+          h3 {
+            font-size: 1.4em;
+          }
+        }
+      }
+      .bottom-chart {
+        padding: 10px 15px 50px 15px;
       }
     }
 
     > div:last-child {
       width: 90%;
       height: auto;
+
+      .top-table {
+        .header-box {
+          width: 90%;
+          padding: 15px 20px;
+          border-radius: 16px;
+          h3 {
+            font-size: 1.4em;
+          }
+        }
+      }
+      .bottom-table {
+        padding: 10px 15px 0 15px;
+      }
     }
   }
 `;

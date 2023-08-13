@@ -19,7 +19,7 @@ export const SelectRangeStyles = styled.div`
     color: #555;
     margin: 0 15px 0 0;
   }
-  @media (min-width: 700px) and (max-width: 1000px) {
+  @media (max-width: 1000px) {
     display: block;
 
     h2 {
