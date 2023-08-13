@@ -283,7 +283,7 @@ Error generating stack: `+o.message+`
     color: #555;
     margin: 0 15px 0 0;
   }
-  @media (min-width: 700px) and (max-width: 1000px) {
+  @media (max-width: 1000px) {
     display: block;
 
     h2 {
@@ -425,10 +425,7 @@ Error generating stack: `+o.message+`
     > div:last-child {
       width: 45%;
     }
-    .bottom-table,
-    .bottom-chart {
-      padding: 10px 15px 0 15px;
-    }
+
     > div:first-child {
       .bottom-chart {
         padding: 10px 15px 50px 15px;
@@ -455,12 +452,37 @@ Error generating stack: `+o.message+`
 
       .top-chart {
         background-size: auto 400px;
+        .header-box {
+          width: 90%;
+          padding: 15px 20px;
+          border-radius: 16px;
+          h3 {
+            font-size: 1.4em;
+          }
+        }
+      }
+      .bottom-chart {
+        padding: 10px 15px 50px 15px;
       }
     }
 
     > div:last-child {
       width: 90%;
       height: auto;
+
+      .top-table {
+        .header-box {
+          width: 90%;
+          padding: 15px 20px;
+          border-radius: 16px;
+          h3 {
+            font-size: 1.4em;
+          }
+        }
+      }
+      .bottom-table {
+        padding: 10px 15px 0 15px;
+      }
     }
   }
 `,MB=Zw`
