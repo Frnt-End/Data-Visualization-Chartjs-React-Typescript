@@ -51,14 +51,15 @@ Error generating stack: `+o.message+`
   display: flex;
   justify-content: center;
   align-items: center;
+
   button {
     background: #f6f6f6 !important;
     border: 1px solid rgba(75, 192, 192, 0);
-    padding: 6px 12px;
+    padding: 3% 5%;
     border-radius: 6px;
-    margin: 20px 6px;
+    margin: 6% 3%;
     cursor: pointer;
-    transition: 0.3 ease;
+    transition: 0.3s ease; // Corrected '0.3 ease' to '0.3s ease'
     color: #555;
 
     &:disabled {
@@ -72,6 +73,7 @@ Error generating stack: `+o.message+`
       background: rgba(32, 144, 230, 0.7) !important;
       border: 1px solid rgba(75, 192, 192, 0.1);
       color: #fff;
+
       &:disabled {
         background: rgba(75, 192, 192, 0) !important;
         border: 1px solid rgba(75, 192, 192, 0);
@@ -79,9 +81,17 @@ Error generating stack: `+o.message+`
       }
     }
   }
+
+  @media (max-width: 1000px) {
+    width: 70%;
+    button {
+      padding: 2% 3%;
+      margin: 4% 2%;
+    }
+  }
 `,VP=br.div`
   width: 100%;
-  height: 350px;
+  height: 340px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,7 +100,7 @@ Error generating stack: `+o.message+`
   table {
     width: 100%;
     border-collapse: collapse;
-    animation: ${WP} 1s ease-in-out;
+    animation: "${WP}" 1s ease-in-out; // Added double quotes around fadeIn
     border-spacing: 0;
 
     th,
@@ -138,6 +148,9 @@ Error generating stack: `+o.message+`
         }
       }
     }
+  }
+  @media (min-width: 700px) and (max-width: 1000px) {
+    height: 330px;
   }
 `,UP=({data:e})=>{const[t,n]=T.useState(0),r=4,i=T.useMemo(()=>[{Header:"Year",accessor:"period"},{Header:"State",accessor:"stateDescription"},{Header:"Sector",accessor:"sectorName"},{Header:"Sales",accessor:"sales"}],[]),o=T.useMemo(()=>e,[e]),{getTableProps:s,getTableBodyProps:a,headerGroups:l,rows:u,prepareRow:c}=BR.useTable({columns:i,data:o}),d=Math.ceil(u.length/r),h=v=>{n(v)},g=()=>Array.from({length:d},(y,b)=>b).map(y=>N.jsx("button",{disabled:t===y,onClick:()=>h(y),children:y+1},y)),p=t*r,m=p+r,S=u.slice(p,m);return N.jsxs(VP,{children:[N.jsxs("table",{...s(),children:[N.jsx("thead",{children:l.map(v=>N.jsx("tr",{...v.getHeaderGroupProps(),children:v.headers.map(y=>N.jsx("th",{...y.getHeaderProps(),children:y.render("Header")}))}))}),N.jsx("tbody",{...a(),children:S.map(v=>(c(v),N.jsx("tr",{...v.getRowProps(),children:v.cells.map(y=>N.jsx("td",{...y.getCellProps(),children:y.render("Cell")}))})))})]}),N.jsxs(HP,{children:[N.jsx("button",{disabled:t===0,onClick:()=>h(t-1),children:"Previous"}),g(),N.jsx("button",{disabled:t===d-1,onClick:()=>h(t+1),children:"Next"})]})]})};/*!
  * @kurkle/color v0.3.2
@@ -270,6 +283,13 @@ Error generating stack: `+o.message+`
     color: #555;
     margin: 0 15px 0 0;
   }
+  @media (min-width: 700px) and (max-width: 1000px) {
+    display: block;
+
+    h2 {
+      margin: 15px 0;
+    }
+  }
 `;br.div`
   width: 150px;
 `;br.div`
@@ -309,18 +329,6 @@ Error generating stack: `+o.message+`
   align-items: flex-start;
   height: 100%;
 
-  .header-box {
-    height: auto;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    left: 29px;
-    top: 17px;
-    padding: 15px 60px;
-  }
-
   h3 {
     color: #4d3550;
     font-weight: 400;
@@ -338,8 +346,6 @@ Error generating stack: `+o.message+`
 
   > div {
     height: 90%;
-    max-height: 90%;
-    min-height: 90%;
 
     background: #fff;
     border-radius: 20px 20px 0 0;
@@ -354,11 +360,24 @@ Error generating stack: `+o.message+`
     position: relative;
 
     .top-chart {
-      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 260px;
       background: url(chart.jpg) no-repeat center top;
       background-size: auto 326px;
-      padding: 240px 20px 20px 20px;
       border-radius: 16px 16px 0 0;
+
+      .header-box {
+        height: auto;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        margin: 30px auto;
+        padding: 15px 60px;
+      }
     }
 
     .bottom-chart {
@@ -372,12 +391,26 @@ Error generating stack: `+o.message+`
     position: relative;
 
     .top-table {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
       width: 100%;
       height: 250px;
       background: url(hand.jpg) no-repeat center;
       background-size: auto 200px;
       background-position-y: 38px;
       border-radius: 16px 16px 0 0;
+      .header-box {
+        height: auto;
+        margin: 30px auto;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+
+        padding: 15px 60px;
+      }
     }
 
     .bottom-table {
@@ -386,15 +419,43 @@ Error generating stack: `+o.message+`
     }
   }
 
-  @media (max-width: 1000px) {
+  @media (min-width: 700px) and (max-width: 1000px) {
+    width: 100%;
+    > div:first-child,
+    > div:last-child {
+      width: 45%;
+    }
+    .bottom-table,
+    .bottom-chart {
+      padding: 10px 15px 0 15px;
+    }
+    > div:first-child {
+      .bottom-chart {
+        padding: 10px 15px 50px 15px;
+      }
+    }
+    > div:last-child {
+      .bottom-table {
+        padding: 10px 15px 0 15px;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
     flex-direction: column;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: center;
 
     > div:first-child {
       width: 90%;
       height: auto;
+
       margin-bottom: 60px;
+
+      .top-chart {
+        background-size: auto 400px;
+      }
     }
 
     > div:last-child {
@@ -444,4 +505,4 @@ Error generating stack: `+o.message+`
   height: 1px;
   background: #eee;
   margin: 10px 0 10px 0;
-`,AB=()=>{const[e,t]=T.useState([]),[n,r]=T.useState(!0);return T.useEffect(()=>{(async()=>{try{const o=await RB();t(o),r(!1)}catch(o){console.error("Error fetching data:",o)}})()},[]),N.jsx(N.Fragment,{children:n?N.jsxs(TB,{children:[N.jsx(lh,{}),N.jsx(lh,{}),N.jsx(lh,{})]}):N.jsxs(PB,{children:[N.jsxs("div",{children:[N.jsxs("div",{className:"header-box",children:[N.jsx("p",{children:"Electricity annual sales overview"}),N.jsx("h3",{children:"Electricity Annual Chart"})]}),N.jsx("div",{className:"top-chart"}),N.jsx("div",{className:"bottom-chart",children:N.jsx(uz,{data:e,startColor:"",endColor:""})})]}),N.jsxs("div",{children:[N.jsxs("div",{className:"header-box",children:[N.jsx("p",{children:"Sales data overview"}),N.jsx("h3",{children:"Electricity Annual Details"})]}),N.jsx("div",{className:"top-table"}),N.jsx(OB,{}),N.jsx("div",{className:"bottom-table",children:N.jsx(UP,{data:e})})]})]})})};uh.createRoot(document.getElementById("root")).render(N.jsx(Yt.StrictMode,{children:N.jsx(AB,{})}));
+`,AB=()=>{const[e,t]=T.useState([]),[n,r]=T.useState(!0);return T.useEffect(()=>{(async()=>{try{const o=await RB();t(o),r(!1)}catch(o){console.error("Error fetching data:",o)}})()},[]),N.jsx(N.Fragment,{children:n?N.jsxs(TB,{children:[N.jsx(lh,{}),N.jsx(lh,{}),N.jsx(lh,{})]}):N.jsxs(PB,{children:[N.jsxs("div",{children:[N.jsxs("div",{className:"top-chart",children:[" ",N.jsxs("div",{className:"header-box",children:[N.jsx("p",{children:"Electricity annual sales overview"}),N.jsx("h3",{children:"Electricity Annual Chart"})]})]}),N.jsx("div",{className:"bottom-chart",children:N.jsx(uz,{data:e,startColor:"",endColor:""})})]}),N.jsxs("div",{children:[N.jsx("div",{className:"top-table",children:N.jsxs("div",{className:"header-box",children:[N.jsx("p",{children:"Sales data overview"}),N.jsx("h3",{children:"Electricity Annual Details"})]})}),N.jsx(OB,{}),N.jsx("div",{className:"bottom-table",children:N.jsx(UP,{data:e})})]})]})})};uh.createRoot(document.getElementById("root")).render(N.jsx(Yt.StrictMode,{children:N.jsx(AB,{})}));
