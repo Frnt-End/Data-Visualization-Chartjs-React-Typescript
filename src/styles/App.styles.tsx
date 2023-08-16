@@ -94,7 +94,7 @@ export const Container = styled.div`
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
         margin: 30px auto;
-        padding: 15px 60px;
+        padding: 15px 4%;
       }
     }
 
@@ -127,8 +127,7 @@ export const Container = styled.div`
         border-radius: 50px;
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
-
-        padding: 15px 60px;
+        padding: 15px 40px;
       }
     }
 
