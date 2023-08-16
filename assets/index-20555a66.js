@@ -415,7 +415,7 @@ Error generating stack: `+o.message+`
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
         margin: 30px auto;
-        padding: 15px 60px;
+        padding: 15px 4%;
       }
     }
 
@@ -448,8 +448,7 @@ Error generating stack: `+o.message+`
         border-radius: 50px;
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
-
-        padding: 15px 60px;
+        padding: 15px 40px;
       }
     }
 
