@@ -415,7 +415,7 @@ Error generating stack: `+o.message+`
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
         margin: 30px auto;
-        padding: 15px 4%;
+        padding: 15px 40%;
       }
     }
 
