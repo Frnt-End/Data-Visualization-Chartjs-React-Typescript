@@ -4,7 +4,7 @@ Implementing an Data Visualization using Chart.js.
 
 👉 [Watch DEMO](https://Frnt-End.github.io/Data-Visualization-Chartjs-React-Typescript)
 
-![Data Visualization API](src/ui-prev.jpg "Data Visualization API")
+![Data Visualization API](src/ui-prev-white.jpg "Data Visualization API")
 
 ### Project Details
 
