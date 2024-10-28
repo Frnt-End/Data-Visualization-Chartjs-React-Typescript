@@ -2,7 +2,9 @@
 
 Implementing an Data Visualization using Chart.js.
 
-👉 [Final Result, interactive](https://Frnt-End.github.io/Data-Visualization-Chartjs-React-Typescript)
+Hello guys, using this starter repo I am hoping we can work on trying to have a go at using Chart.js as a tool for data visualisation. You can feel free to have fun with it exploring all the sample charts and stuff or aim to reproduce the visualisation below.
+
+👉 [End goal](https://Frnt-End.github.io/Data-Visualization-Chartjs-React-Typescript)
 
 ![Data Visualization API](src/ui-prev-white.jpg "Data Visualization API")
 
@@ -33,10 +35,18 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://127.0.0.1:5173/](http://127.0.0.1:5173/) to view it in the browser.
 
-CREATING THE CHARTS!
 
-Steps:
+## Documentation
+https://www.chartjs.org/docs/latest/samples/information.html
 
-1. Start by creating a chart folder in components
-2. Create 2 new files, one BarChart.tsx and FilterMenu.tsx
-3. Remember to import them in to App.tsx when you're ready.
+
+
+# Help For BarChart:
+- Create usestates for startYear and endYear
+- A usestate for the chartData as an object including
+    - labels: [] as string[]
+    - datasets: [{
+
+    }]
+- useEffect to filter and setChartData.
+- handleYearsChange
