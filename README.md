@@ -2,7 +2,7 @@
 
 Implementing an Data Visualization using Chart.js.
 
-👉 [Watch DEMO](https://Frnt-End.github.io/Data-Visualization-Chartjs-React-Typescript)
+👉 [Final Result, interactive](https://Frnt-End.github.io/Data-Visualization-Chartjs-React-Typescript)
 
 ![Data Visualization API](src/ui-prev-white.jpg "Data Visualization API")
 
@@ -32,3 +32,11 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://127.0.0.1:5173/](http://127.0.0.1:5173/) to view it in the browser.
+
+CREATING THE CHARTS!
+
+Steps:
+
+1. Start by creating a chart folder in components
+2. Create 2 new files, one BarChart.tsx and FilterMenu.tsx
+3. Remember to import them in to App.tsx when you're ready.
