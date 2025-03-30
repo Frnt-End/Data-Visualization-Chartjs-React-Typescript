@@ -30,47 +30,6 @@ export const Container = styled.div`
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   }
 
-  .status-bar {
-    display: flex;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 85%;
-    margin-top: 15px;
-
-    .time {
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .icons {
-      display: flex;
-      align-items: center;
-      opacity: 0.7;
-
-      img {
-        display: block;
-        outline: none;
-        border: none;
-      }
-
-      img.battery {
-        width: 20px;
-        height: 20px;
-      }
-      img.signal {
-        width: 12px;
-        height: 12px;
-        margin-right: 3px;
-      }
-      img.wifi {
-        width: 13px;
-        height: 13px;
-        margin-right: 3px;
-      }
-    }
-  }
-
   > div:first-child {
     display: flex;
     flex-direction: column;
@@ -86,6 +45,8 @@ export const Container = styled.div`
       background: url(chart.jpg) no-repeat center top;
       background-size: auto 326px;
       border-radius: 32px 32px 0 0;
+      background-size: cover;
+      background-position-y: center;
 
       .header-box {
         height: auto;
@@ -119,6 +80,8 @@ export const Container = styled.div`
       background-size: auto 200px;
       background-position-y: 38px;
       border-radius: 32px 32px 0 0;
+      background-size: cover;
+      background-position-y: center;
 
       .header-box {
         height: auto;

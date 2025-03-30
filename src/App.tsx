@@ -33,15 +33,6 @@ const App: React.FC = () => {
         <Container>
           <div>
             <div className="top-chart">
-              <div className="status-bar">
-                <div className="time">9:41</div>
-                <div className="icons">
-                  <img src="signal.png" className="signal" alt="signal" />
-
-                  <img src="wifi.png" className="wifi" alt="wifi" />
-                  <img src="battery.png" className="battery" alt="battery" />
-                </div>
-              </div>
               <div className="header-box">
                 <p>Electricity annual sales overview</p>
                 <h3>Electricity Annual Chart</h3>
@@ -53,14 +44,6 @@ const App: React.FC = () => {
           </div>
           <div>
             <div className="top-table">
-              <div className="status-bar">
-                <div className="time">9:41</div>
-                <div className="icons">
-                  <img src="signal.png" className="signal" alt="signal" />
-                  <img src="wifi.png" className="wifi" alt="wifi" />
-                  <img src="battery.png" className="battery" alt="battery" />
-                </div>
-              </div>
               <div className="header-box">
                 <p>Sales data overview</p>
                 <h3>Electricity Annual Details</h3>
